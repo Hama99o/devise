@@ -31,6 +31,7 @@ class Devise::PasswordsController < DeviseController
 
   # PUT /resource/password
   def update
+    p 'hello --------------'
     self.resource = resource_class.reset_password_by_token(resource_params)
     yield resource if block_given?
 
