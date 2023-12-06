@@ -36,7 +36,9 @@ class Devise::PasswordsController < DeviseController
     p 'ehhehehe'
     self.resource = resource_class.reset_password_by_token(resource_params)
     yield resource if block_given?
-
+    p resource
+    p '----------------------'
+    p 'hehehehehhehe'
     if resource.errors.empty?
       resource.unlock_access! if unlockable?(resource)
       if resource_class.sign_in_after_reset_password
